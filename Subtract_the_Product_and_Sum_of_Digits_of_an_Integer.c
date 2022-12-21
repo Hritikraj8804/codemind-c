@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,s=0,p=1;
+    int n,p=1,r,s=0;
     scanf("%d",&n);
     while(n!=0)
     {
@@ -11,4 +11,4 @@ int main()
         n=n/10;
     }
     printf("%d",p-s);
-}
+ }
