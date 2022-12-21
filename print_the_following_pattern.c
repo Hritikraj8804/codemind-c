@@ -1,35 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j;
+    int n,i,j,k;
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
-    //   if(n%2==0)
-    //   {
-    //         for(j=1;j<=(n)/2;j++)
-    //         {
-    //              printf("%d",j);
-    //          }
-    //         for(j=((n)/2);j>=1;j--)
-    //         {
-    //              printf("%d",j);
-    //         }
-    //         printf("
+        for(j=1;j<=n-2;j++)
+        {
+            printf("%d",j);
+        }
+        for(j=1;j<n-2;j++)
+        {
+            printf("%d",j);
+        }
+        printf("
 ");
-    //   }
-    //   else if(n%2!=0)
-    //     {
-            for(j=1;j<=n-2;j++)
-            {
-                 printf("%d",j);
-            }
-            for(j=n-3;j>=1;j--)
-            {
-                 printf("%d",j);
-            }
-            printf("
-");
-    //   }
     }
 }
