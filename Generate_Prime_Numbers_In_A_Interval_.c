@@ -2,9 +2,9 @@
 
 int main() 
 {
-int i,j,n,count,p;
-scanf("%d%d",&n,&p);
-for(i=n;i<=p;i++)
+int i,j,a,b,c=0,count,d;
+scanf("%d%d",&a,&b);
+for(i=a;i<=b;i++)
 {
     count=0;
     for(j=1;j<=i;j++)
@@ -12,12 +12,16 @@ for(i=n;i<=p;i++)
         if(i%j==0)
         {
         count=count+1;
+        d=i;
         }
     }
     if(count==2)
     {
-        printf("%d
-",i);
-    }
+     
+    
+    printf("%d
+",d);
 }
+}
+
 }
