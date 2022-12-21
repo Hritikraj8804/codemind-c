@@ -3,9 +3,11 @@ int main()
 {
     int n,i;
     scanf("%d",&n);
-    for(i=1;i<=12;i++)
+    i=1;
+    while(i<=12)
     {
         printf("%d x %d = %d
 ",n,i,n*i);
+        i++;
     }
 }
