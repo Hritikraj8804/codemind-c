@@ -5,16 +5,31 @@ int main()
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
-         for(int k=1;k<=n-i;k++)
-           { 
-                printf(" ");
-                
+    //   if(n%2==0)
+    //   {
+    //         for(j=1;j<=(n)/2;j++)
+    //         {
+    //              printf("%d",j);
+    //          }
+    //         for(j=((n)/2);j>=1;j--)
+    //         {
+    //              printf("%d",j);
+    //         }
+    //         printf("
+");
+    //   }
+    //   else if(n%2!=0)
+    //     {
+            for(j=1;j<=n-2;j++)
+            {
+                 printf("%d",j);
             }
-        for(j=1;j<=2*i-1;j++)
-        {
-                 printf("%d",i);
-        }
+            for(j=n-3;j>=1;j--)
+            {
+                 printf("%d",j);
+            }
             printf("
 ");
+    //   }
     }
 }
