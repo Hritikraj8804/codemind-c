@@ -1,14 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,hcf,i;
+    int a,b;
     scanf("%d%d",&a,&b);
-    for(i=1;i<a || i<b;i++)
+    
+    while(a!=b)
     {
-        if(a%i==0 && b%i==0)
-        {
-            hcf=i;
+        if(a>b){
+            a-=b;
+        }
+        else{
+            b-=a;
         }
     }
-    printf("%d",hcf);
+   
+    printf("%d",a);
 }
