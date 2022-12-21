@@ -3,16 +3,21 @@ int main()
 {
     int a,b;
     scanf("%d%d",&a,&b);
-    
-    while(a!=b)
+    while(a!=0 && b!=0)
     {
-        if(a>b){
-            a-=b;
+        if(a>b)
+        {
+            a=a%b;
+    
         }
-        else{
-            b-=a;
+        else
+        {
+            b=b%a;
+            
         }
     }
-   
+    if(a==0)
+    printf("%d",b);
+    else
     printf("%d",a);
 }
