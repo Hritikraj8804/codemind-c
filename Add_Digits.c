@@ -1,23 +1,13 @@
 #include<stdio.h>
-int ad(int x);
 int main()
 {
-    int n,x;
+    int n,r,s=0;
     scanf("%d",&n);
-   while(n>=10)
-   {
-       n=ad(n);
-   }
-   printf("%d",n);
-}
-int ad(int x)
-{
-    int r,s=0;
-    while(x!=0)
+    while(n>9)
     {
-        r=x%10;
-        s=s+r;
-        x=x/10;
+        r=n%10;//38%10=8
+        n=n/10;//38/10=3
+        n=n+r;
     }
-    return s;
+    printf("%d",n);
 }
