@@ -1,18 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int x,y;
-    scanf("%d %d",&x,&y);
-    if(x!=0 && x%2==0)
-    {
-        printf("YES");
-    }
-    else if(x==0 && y%2==0)
-    {
-        printf("YES");
-    }
-    else
-    {
-        printf("NO");
-    }
+    int n,m;
+    scanf("%d%d",&n,&m);
+    if(n==0&&m%2==0||n!=0&&n%2==0)printf("YES");
+    else printf("NO");
 }
