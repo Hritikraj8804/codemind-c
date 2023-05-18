@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,x[10],i,r=0,c=0;
+    int n,x[10],c=0,r=0,i;
     scanf("%d",&n);
     for(i=0;i<10;i++)
     {
@@ -15,12 +15,12 @@ int main()
     }
     for(i=0;i<10;i++)
     {
-        if(x[i]>1)
-        {
-            printf("Not Unique Number");
-            c++;
-            break;
-        }
+    if(x[i]>1)
+    {
+        printf("Not Unique Number");
+        c++;
+        break;
+    }
     }
     if(c==0)printf("Unique Number");
 }
