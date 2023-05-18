@@ -5,63 +5,40 @@ int fib(int n)
     for(i=1;i<=n;i++)
     {
         c=a+b;
-        if(c==n)
-        {
-            ct++;
-        }
         a=b;
         b=c;
+        if(c==n)
+        ct++;
     }
-    if(ct==0)
-    {
-        return 0;
-    }
-    else
-    {
-        return 1;
-    }
+    if(ct==0)return 0;
+    else return 1;
 }
-
 int main()
 {
- int n,i,d1=0,d2=0,np1=0,np2=0;
- scanf("%d",&n);
- for(i=n;;i++)
- {
- 	if(fib(i))
- 	{
- 		d2=i-n;
- 		np1=i;
- 		break;
- 		
-	}
- }
- for(i=n;;i--)
- {
- 	if(fib(i))
- 	{
- 		d1=n-i;
- 		np2=i;
- 		break;
- 		
-	}
- }
- 
- if(d1<d2)
- {
- 	printf("%d
-",np2);
- }
- else if(d1>d2)
- {
- 	printf("%d
+        int k,d1=0,d2=0,np1=0,np2=0,n;
+        scanf("%d",&n);
+        for(k=n;;k++)
+        {
+            if(fib(k))
+            {
+                d1=k-n;
+                np1=k;
+                break;
+            }
+        }
+        for(k=n-1;;k--)
+        {
+            if(fib(k))
+            {
+                d2=n-k;
+                np2=k;
+                break;
+            }
+        }
+        if(d1<d2)printf("%d
 ",np1);
- }
- else
- {
- 	printf("%d %d
+        else if(d2<d1)printf("%d
+",np2);
+        else printf("%d %d
 ",np2,np1);
- }
-	
 }
-
