@@ -1,9 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,i,n;
-    scanf("%d %d",&a,&b);
-    for(i=1;i<=n;i++)
+    int a,b,i;
+    scanf("%d%d",&a,&b);
+    int max=a>b?a:b;
+    for(i=max;;i++)
     {
         if(i%a==0&&i%b==0)
         {
@@ -11,5 +12,4 @@ int main()
             break;
         }
     }
- 
-  }
+}
