@@ -7,22 +7,22 @@ int prime(int n)
         if(n%i==0)
         c++;
     }
-    if(c==2)return 1;
+    if(c==2) return 1;
     else return 0;
 }
 int main()
 {
-    int n,i,c=0;
+    int n,t=0,i,c;
     scanf("%d",&n);
-    for(i=2;i<=n/2;i++)
+    for(i=2;i<=n;i++)
     {
-        if(n%i==0 &&prime(i)&&prime(n/i)){
-        printf("%d %d",i,n/i);
-        c=1;
+        c=n/i;
+        if(prime(i) && n%i==0 && n%c==0 && prime(c))
+        {
+        t++;
         break;
         }
     }
-    if(c==0){
-        printf("-1");
-    }
+    if(t==1)printf("%d %d",i,c);
+        else printf("-1");
 }
