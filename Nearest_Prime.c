@@ -5,59 +5,42 @@ int prime(int n)
     for(i=1;i<=n;i++)
     {
         if(n%i==0)
-        {
-            c++;
-        }
+        c++;
     }
-    if(c==2)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    if(c==2)return 1;
+    else return 0;
 }
 int main()
 {
-    int j,h;
-    scanf("%d",&h);
-    for(j=1;j<=h;j++)
+    int k,j;
+    scanf("%d",&k);
+    for(j=1;j<=k;j++)
     {
-    int n,i,d1,d2,s1,s2;
+    int n,d1=0,d2=0,np1=0,np2=0,i;
     scanf("%d",&n);
     for(i=n;;i++)
     {
         if(prime(i))
         {
             d1=i-n;
-            s1=i;
+            np1=i;
             break;
         }
     }
-    for(i=n;;i--)
+    for(i=n-1;;i--)
     {
         if(prime(i))
         {
             d2=n-i;
-            s2=i;
+            np2=i;
             break;
         }
     }
-    if(d1>d2)
-    {
-        printf("%d
-",s2);
+    if(d1<d2)printf("%d
+",np1);
+    else if(d2<d1)printf("%d
+",np2);
+    else printf("%d
+",np2);
     }
-    else if(d2>d1)
-    {
-        printf("%d
-",s1);
-    }
-    else
-    {
-        printf("%d
-",s2);
-    }
-}
 }
